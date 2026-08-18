@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Navigate } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
+import ThemeToggle from '../components/ThemeToggle'
 
 export default function Login() {
   const { session, loading, signIn } = useAuth()
@@ -22,6 +23,7 @@ export default function Login() {
 
   return (
     <div className="login-screen">
+      <ThemeToggle variant="fixed" />
       <form className="login-card" onSubmit={handleSubmit}>
         <h1>TCIF CRM</h1>
         <p className="subtitle">Suivi clients — accès privé</p>

@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
+import ThemeToggle from './ThemeToggle'
 
 const links = [
   { to: '/', label: 'Accueil', icon: '📊', end: true },
@@ -14,6 +15,8 @@ export default function Nav() {
 
   return (
     <>
+      <ThemeToggle variant="fixed" />
+
       <header className="topbar">
         <span className="brand">TCIF CRM</span>
         <nav className="topbar-links">
@@ -23,6 +26,7 @@ export default function Nav() {
             </NavLink>
           ))}
         </nav>
+        <ThemeToggle variant="inline" />
         <button className="btn-ghost" onClick={signOut}>Déconnexion</button>
       </header>
 
