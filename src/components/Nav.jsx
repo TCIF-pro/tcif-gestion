@@ -15,8 +15,6 @@ export default function Nav() {
 
   return (
     <>
-      <ThemeToggle variant="fixed" />
-
       <header className="topbar">
         <span className="brand">TCIF CRM</span>
         <nav className="topbar-links">
@@ -37,6 +35,7 @@ export default function Nav() {
             <span className="label">{l.label}</span>
           </NavLink>
         ))}
+        <ThemeToggle variant="bottombar" />
       </nav>
     </>
   )

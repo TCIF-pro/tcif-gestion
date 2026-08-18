@@ -23,9 +23,11 @@ export default function Login() {
 
   return (
     <div className="login-screen">
-      <ThemeToggle variant="fixed" />
       <form className="login-card" onSubmit={handleSubmit}>
-        <h1>TCIF CRM</h1>
+        <div className="login-card-header">
+          <h1>TCIF CRM</h1>
+          <ThemeToggle />
+        </div>
         <p className="subtitle">Suivi clients — accès privé</p>
 
         <label>
